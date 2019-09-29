@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable1 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable2 { width: 200px; height: 100px;  float: left; z-index:10000;  }
+  #draggable3 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable4 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable5 { width: 500px; height: 100px; float: left; z-index:10000;  }
+  #draggable6 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable7 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable8 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable9 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable10 { width: 200px; height: 100px; float: left; z-index:10000;  }
+  #draggable11 { width: 200px; height: 100px; float: left; z-index:10000;  }
+  #draggable12 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable13 { width: 300px; height: 200px; float: left; z-index:10000;  }
+  #draggable14 { width: 200px; height: 100px; float: left; z-index:10000;  }
+  #draggable15 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  #draggable16 { width: 100px; height: 100px; float: left; z-index:10000;  }
+  p{font-size:10px}
+  #droppable { width: 500px; height: 200px;  position:relative; top:300px; left: 50px; margin-left:auto; margin-right:auto }
+  .container{
+    display: flex;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable1" ).draggable();
+    $( "#draggable2" ).draggable();
+    $( "#draggable4" ).draggable();
+    $( "#draggable5" ).draggable();
+    $( "#draggable3" ).draggable();
+    $( "#draggable6" ).draggable();
+    $( "#draggable7" ).draggable();
+    $( "#draggable8" ).draggable();
+    $( "#draggable9" ).draggable();
+    $( "#draggable10" ).draggable();
+    $( "#draggable11" ).draggable();
+    $( "#draggable12" ).draggable();
+    $( "#draggable13" ).draggable();
+    $( "#draggable14" ).draggable();
+    $( "#draggable15" ).draggable();
+    $( "#draggable16" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Packing!" );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="container">
+<div id="draggable1" class="ui-widget-content">
+  <p>Umbrella<br/>"I really hate the rain. "<br/>$20</p>
+
+</div>
+ 
+<div id="draggable2" class="ui-widget-content">
+  <p>Film Camera<br/>"I got it from my grandpa. He told me that this is the first camera he's ever got"<br/>$40</p>
+</div>
+
+<div id="draggable3" class="ui-widget-content">
+  <p>Your Favorite Record<br/>"This is the original pressing of my favorite record"<br/>$10</p>
+
+</div>
+
+<div id="draggable4" class="ui-widget-content">
+  <p>Headphones<br/>"I get really anxious when I'm in crowded places. But this makes me feel better"<br/>$50</p>
+
+</div>
+</div>
+
+<div id="draggable6" class="ui-widget-content">
+  <p>Family Photo<br/>"This is the only photo of my parents together with me. They divorced when I was 7"</p>
+
+</div>
+
+<div id="draggable7" class="ui-widget-content">
+  <p>Your Favorite Book<br/>"It's a gift from my best friend in high school. We don't really talk anymore now. I just don't know how to."</br>$10</p>
+
+</div>
+
+<div id="draggable5" class="ui-widget-content">
+  <p>Your Dog<br/>"She's been with me for 5 years. I watched her grow from a smol bean to what she is like now."<br/>Cost you $50 every month</p>
+</div>
+
+
+<div id="draggable8" class="ui-widget-content">
+  <p>Necklace from Grandma<br/>"She told me this is going to keep me safe and bring me good luck."</br>$80</p>
+
+</div>
+
+<div id="draggable9" class="ui-widget-content">
+  <p>A Pot<br/>"Cooking calms me down. And it costs me less than eating outside."</br>$20</p>
+
+</div>
+
+<div id="draggable10" class="ui-widget-content">
+  <p>Video Game System<br/>"It has all my favorite games on it."</br>$50</p>
+
+</div>
+
+<div id="draggable11" class="ui-widget-content">
+  <p>Signed Poster<br/>"I was lucky enough to meet my favorite band and have them sign the poster for me"</br>$100</p>
+</div>
+
+<div id="draggable12" class="ui-widget-content">
+  <p>Your Favorite Snack<br/>"I won't be able to buy it anywhere but my hometown"</br>$100</p>
+</div>
+
+<div id="draggable13" class="ui-widget-content">
+  <p>A Clown<br/>"He'd entertain me when I'm in the new country"</br></p>
+</div>
+
+<div id="draggable14" class="ui-widget-content">
+  <p>Childhood Toy<br/>"It reminds of the happy time I had when I was a child"</br>$5</p>
+</div>
+
+<div id="draggable15" class="ui-widget-content">
+  <p>Swiss Army Knife<br/>"It helps me to fix and build stuff"</br>$5</p>
+</div>
+
+<div id="draggable16" class="ui-widget-content">
+  <p>Your Journal<br/>"I try to write in my journal every day. It reminds me of who I am as a person."</br></p>
+</div>
+
+<div id="droppable" class="ui-widget-header">
+  <p>Pack Your Suitcase!</p>
+</div>
+ 
+ 
+</body>
+</html>
